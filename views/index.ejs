@@ -1,0 +1,22 @@
+<% include ./partials/header %>
+
+<div class="ui raised very padded text container segment">
+<% blogs.forEach(function(blog) { %>
+
+
+    <div class="ui items">
+      <div class="item">
+            <div class="ui medium circular image">
+              <img src="<%= blog.image %>">
+            </div>
+            <div class="middle aligned content">
+              <a href="/blogs/<%= blog._id %>" class="header" data-tooltip="Read More" data-position="top center"><%= blog.title %></a>
+            </div>
+      </div>
+    </div>
+
+
+<% }); %>
+</div>
+
+<% include ./partials/footer %>

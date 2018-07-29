@@ -1,0 +1,30 @@
+<% include ./partials/header %>
+
+<div class="ui raised very padded text container segment">
+
+<div class="ui header">New Blog</div>
+
+<form class="ui form" action="/blogs" method="POST">
+            <div class="field">
+            <label>Title</label>
+             <input type="text" name="title" placeholder="Title">
+            </div>
+            
+             <div class="field">
+            <label>Image</label>
+              <input type="text" name="image" placeholder="Image-URL">   
+            </div>
+            
+             <div class="field">
+            <label>Content</label>
+            <textarea name="content" placeholder="Content"></textarea>
+            </div>
+     
+      
+      <input class="ui basic green button" type="submit">
+      
+</div>      
+      
+</form>      
+
+<% include ./partials/footer %>

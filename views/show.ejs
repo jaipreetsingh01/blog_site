@@ -1,0 +1,30 @@
+<% include partials/header %>
+
+<div class="ui raised very padded text container segment">
+  <h2 class="ui header"> <%=blogs.title %> </h2>
+  
+  <div class="ui items">
+ 
+    <div class="image">
+      <div class="container">
+      <img src="<%=blogs.image %>" class="ui rounded image">
+      </div>
+    </div>
+    
+    <span><%= blogs.date.toDateString() %></span><br><br>
+    
+    <div class="description">
+    <p><%-blogs.content %></p>
+      </div>
+      
+    
+  </div>
+  
+  <button class="ui button basic violet" href="/blogs/<%=blogs._id %>/edit">Edit post</button>
+  <form  style="display:inline" action="/blogs/<%= blogs._id %>?_method=DELETE"method="POST">
+    <input type="submit" class =" ui button basic red" value="Delete Post">
+  </form>
+  
+</div>
+
+<% include partials/footer %>
